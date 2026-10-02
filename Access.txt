@@ -1,0 +1,59 @@
+Access
+
+Home: http://127.0.0.1:5000
+
+Login choice: /login-choice
+
+Doctor: username doctor, password pass123
+
+Admin: admin / admin123
+
+Patient: patient / patient123
+
+
+
+Username	Name	Password
+dr_john_smith	Dr. John Smith	doctor123
+dr_emily_johnson	Dr. Emily Johnson	doctor123
+dr_michael_williams	Dr. Michael Williams	doctor123
+dr_sarah_brown	Dr. Sarah Brown	doctor123
+dr_david_jones	Dr. David Jones	doctor123
+dr_lisa_garcia	Dr. Lisa Garcia	doctor123
+dr_james_miller	Dr. James Miller	doctor123
+dr_patricia_davis	Dr. Patricia Davis	doctor123
+dr_robert_rodriguez	Dr. Robert Rodriguez	doctor123
+dr_jennifer_martinez	Dr. Jennifer Martinez	doctor123
+dr_christopher_anderson	Dr. Christopher Anderson	doctor123
+dr_ashley_thomas	Dr. Ashley Thomas	doctor123
+dr_matthew_jackson	Dr. Matthew Jackson	doctor123
+dr_amanda_white	Dr. Amanda White	doctor123
+dr_joshua_harris	Dr. Joshua Harris	doctor123
+🚀 How to log in
+Go to the login choice page: http://127.0.0.1:5000/login-choice
+
+Username	Patient Name	Password
+patient_john_doe	John Doe	patient123
+patient_jane_smith	Jane Smith	patient123
+patient_robert_johnson	Robert Johnson	patient123
+patient_maria_garcia	Maria Garcia	patient123
+patient_james_brown	James Brown	patient123
+patient_linda_davis	Linda Davis	patient123
+patient_michael_miller	Michael Miller	patient123
+How to Add Them to Your Running App
+Via the Admin Interface – log in as admin (admin123), go to Create User, and add each patient with role patient.
+
+Via Code – you can write a small script that loops through the list and inserts them into users_db, then calls save_users_to_file() to persist them.
+
+If you just want to test the system with a patient login, use the existing patient / patient123 credentials – that account is already set up and can be used to access the patient dashboard.
+
+
+Enter the username and password.
+
+You will be redirected to the Doctor Dashboard.
+
+If you can't find the doctor login page, you can also directly visit:
+
+http://127.0.0.1:5000/doctor/login
+
+
+

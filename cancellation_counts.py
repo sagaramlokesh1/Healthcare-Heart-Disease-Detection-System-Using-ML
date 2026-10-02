@@ -1,0 +1,1 @@
+guest_cancellation_counts = {}      # {email: count} – for non‑logged‑in users
