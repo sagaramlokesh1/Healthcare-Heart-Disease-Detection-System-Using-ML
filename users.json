@@ -1,0 +1,189 @@
+{
+  "users_db": {
+    "admin": {
+      "id": 1,
+      "password": "admin123",
+      "name": "System Admin",
+      "email": "admin@medpredict.com",
+      "role": "admin",
+      "created_at": "2026-06-17"
+    },
+    "patient_john_doe": {
+      "id": 809,
+      "password": "patient123",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "role": "patient",
+      "created_at": "2026-06-18"
+    },
+    "patient_jane_smith": {
+      "id": 810,
+      "password": "patient123",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "role": "patient",
+      "created_at": "2026-06-18"
+    },
+    "patient_robert_johnson": {
+      "id": 811,
+      "password": "patient123",
+      "name": "Robert Johnson",
+      "email": "robert.johnson@example.com",
+      "role": "patient",
+      "created_at": "2026-06-18"
+    },
+    "patient_maria_garcia": {
+      "id": 812,
+      "password": "patient123",
+      "name": "Maria Garcia",
+      "email": "maria.garcia@example.com",
+      "role": "patient",
+      "created_at": "2026-06-18"
+    },
+    "patient_james_brown": {
+      "id": 813,
+      "password": "patient123",
+      "name": "James Brown",
+      "email": "james.brown@example.com",
+      "role": "patient",
+      "created_at": "2026-06-18"
+    },
+    "patient_linda_davis": {
+      "id": 814,
+      "password": "patient123",
+      "name": "Linda Davis",
+      "email": "linda.davis@example.com",
+      "role": "patient",
+      "created_at": "2026-06-18"
+    },
+    "patient_michael_miller": {
+      "id": 815,
+      "password": "patient123",
+      "name": "Michael Miller",
+      "email": "michael.miller@example.com",
+      "role": "patient",
+      "created_at": "2026-06-18"
+    },
+    "dr_john_smith": {
+      "id": 6726,
+      "password": "doctor123",
+      "name": "Dr. John Smith",
+      "email": "john.smith@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_emily_johnson": {
+      "id": 6727,
+      "password": "doctor123",
+      "name": "Dr. Emily Johnson",
+      "email": "emily.johnson@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_michael_williams": {
+      "id": 6728,
+      "password": "doctor123",
+      "name": "Dr. Michael Williams",
+      "email": "michael.williams@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_sarah_brown": {
+      "id": 6729,
+      "password": "doctor123",
+      "name": "Dr. Sarah Brown",
+      "email": "sarah.brown@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_david_jones": {
+      "id": 6730,
+      "password": "doctor123",
+      "name": "Dr. David Jones",
+      "email": "david.jones@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_lisa_garcia": {
+      "id": 6731,
+      "password": "doctor123",
+      "name": "Dr. Lisa Garcia",
+      "email": "lisa.garcia@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_james_miller": {
+      "id": 6732,
+      "password": "doctor123",
+      "name": "Dr. James Miller",
+      "email": "james.miller@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_patricia_davis": {
+      "id": 6733,
+      "password": "doctor123",
+      "name": "Dr. Patricia Davis",
+      "email": "patricia.davis@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_robert_rodriguez": {
+      "id": 6734,
+      "password": "doctor123",
+      "name": "Dr. Robert Rodriguez",
+      "email": "robert.rodriguez@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_jennifer_martinez": {
+      "id": 6735,
+      "password": "doctor123",
+      "name": "Dr. Jennifer Martinez",
+      "email": "jennifer.martinez@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_christopher_anderson": {
+      "id": 6736,
+      "password": "doctor123",
+      "name": "Dr. Christopher Anderson",
+      "email": "christopher.anderson@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_ashley_thomas": {
+      "id": 6737,
+      "password": "doctor123",
+      "name": "Dr. Ashley Thomas",
+      "email": "ashley.thomas@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_matthew_jackson": {
+      "id": 6738,
+      "password": "doctor123",
+      "name": "Dr. Matthew Jackson",
+      "email": "matthew.jackson@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_amanda_white": {
+      "id": 6739,
+      "password": "doctor123",
+      "name": "Dr. Amanda White",
+      "email": "amanda.white@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    },
+    "dr_joshua_harris": {
+      "id": 6740,
+      "password": "doctor123",
+      "name": "Dr. Joshua Harris",
+      "email": "joshua.harris@medpredict.com",
+      "role": "doctor",
+      "created_at": "2026-08-04"
+    }
+  },
+  "next_user_id": 6741
+}

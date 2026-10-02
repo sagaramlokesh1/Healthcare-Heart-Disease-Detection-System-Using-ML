@@ -1,0 +1,415 @@
+HeartDiseaseProject/
+│
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── db.sqlite3
+├── manage.py
+│
+├── ml_model/                              # Machine Learning Layer
+│   │
+│   ├── dataset/
+│   │   └── heart.csv
+│   │
+│   ├── notebooks/
+│   │   └── heart_analysis.ipynb
+│   │
+│   ├── train_model.py
+│   ├── predict.py
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
+│   ├── evaluation.py
+│   │
+│   ├── saved_models/
+│   │   ├── heart_model.pkl
+│   │   ├── scaler.pkl
+│   │   └── feature_columns.pkl
+│   │
+│   ├── reports/
+│   │   ├── accuracy_report.txt
+│   │   ├── confusion_matrix.png
+│   │   ├── feature_importance.png
+│   │   └── model_performance.pdf
+│   │
+│   └── visualizations/
+│       ├── heatmap.png
+│       ├── risk_distribution.png
+│       └── correlation_matrix.png
+│
+├── backend/                               # Django Backend
+│   │
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   │   └── asgi.py
+│   │
+│   ├── predictor/
+│   │   │
+│   │   ├── migrations/
+│   │   │
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── forms.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── tests.py
+│   │   ├── validators.py
+│   │   ├── services.py
+│   │   ├── ml_utils.py
+│   │   ├── constants.py
+│   │   │
+│   │   ├── report_generator.py          # PDF generator
+│   │   ├── csv_export.py                # CSV export
+│   │   ├── excel_export.py              # Excel export
+│   │   ├── analytics.py
+│   │   └── chart_generator.py
+│   │
+│   └── accounts/
+│       ├── models.py
+│       ├── views.py
+│       ├── forms.py
+│       └── urls.py
+│
+├── frontend/                              # Frontend Layer
+│   │
+│   ├── templates/
+│   │   └── predictor/
+│   │       │
+│   │       ├── base.html
+│   │       ├── navbar.html
+│   │       ├── sidebar.html
+│   │       ├── footer.html
+│   │       │
+│   │       ├── index.html
+│   │       ├── predict.html
+│   │       ├── result.html
+│   │       ├── dashboard.html
+│   │       ├── patients.html
+│   │       ├── patient_detail.html
+│   │       ├── reports.html
+│   │       ├── report_preview.html
+│   │       ├── history.html
+│   │       ├── analytics.html
+│   │       ├── about.html
+│   │       ├── contact.html
+│   │       ├── login.html
+│   │       ├── register.html
+│   │       └── error.html
+│   │
+│   ├── static/
+│   │   │
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   │   ├── dashboard.css
+│   │   │   ├── reports.css
+│   │   │   ├── animations.css
+│   │   │   └── responsive.css
+│   │   │
+│   │   ├── js/
+│   │   │   ├── app.js
+│   │   │   ├── charts.js
+│   │   │   ├── validations.js
+│   │   │   ├── reports.js
+│   │   │   └── dashboard.js
+│   │   │
+│   │   ├── images/
+│   │   │   ├── hero-bg.jpg
+│   │   │   ├── doctor.png
+│   │   │   ├── heart-icon.png
+│   │   │   ├── hospital-logo.png
+│   │   │   ├── medical-banner.jpg
+│   │   │   └── favicon.ico
+│   │   │
+│   │   ├── charts/
+│   │   │   ├── risk_chart.png
+│   │   │   ├── analytics_chart.png
+│   │   │   └── monthly_prediction.png
+│   │   │
+│   │   ├── icons/
+│   │   │
+│   │   └── vendors/
+│   │       ├── bootstrap/
+│   │       ├── chartjs/
+│   │       ├── fontawesome/
+│   │       ├── sweetalert/
+│   │       └── aos/
+│   │
+│   └── media/
+│       │
+│       ├── reports/
+│       │   │
+│       │   ├── pdf/
+│       │   │   ├── patient_101.pdf
+│       │   │   ├── patient_102.pdf
+│       │   │   ├── analytics_report.pdf
+│       │   │   └── monthly_report.pdf
+│       │   │
+│       │   ├── csv/
+│       │   │   └── patient_records.csv
+│       │   │
+│       │   ├── excel/
+│       │   │   └── patient_data.xlsx
+│       │   │
+│       │   └── charts/
+│       │       ├── risk_graph.png
+│       │       └── patient_stats.png
+│       │
+│       └── uploads/
+│           └── ecg_images/
+│
+└── deployment/
+    ├── gunicorn_config.py
+    ├── Procfile
+    ├── runtime.txt
+    ├── nginx.conf
+    ├── docker-compose.yml
+    └── Dockerfile
+
+
+
+updated structure 
+
+HeartDiseaseProject/
+│
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── db.sqlite3
+├── manage.py
+├── .env
+│
+├── ml_model/                                  # Machine Learning Layer
+│   │
+│   ├── dataset/
+│   │   ├── heart.csvmkdir -p ml_model/dataset
+
+│   │   ├── patient_records.csv
+│   │   └── prediction_history.csv
+│   │
+│   ├── notebooks/
+│   │   ├── heart_analysis.ipynb
+│   │   ├── data_visualization.ipynb
+│   │   └── model_training.ipynb
+│   │
+│   ├── train_model.py
+│   ├── predict.py
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
+│   ├── evaluation.py
+│   ├── recommendation_system.py              ← NEW
+│   ├── notification_service.py               ← NEW
+│   ├── history_manager.py                    ← NEW
+│   ├── analytics_engine.py                   ← NEW
+│   └── ecg_analysis.py                       ← NEW
+│
+│   ├── saved_models/
+│   │   ├── heart_model.pkl
+│   │   ├── scaler.pkl
+│   │   ├── feature_columns.pkl
+│   │   └── encoder.pkl
+│   │
+│   ├── reports/
+│   │   ├── accuracy_report.txt
+│   │   ├── confusion_matrix.png
+│   │   ├── feature_importance.png
+│   │   ├── model_performance.pdf
+│   │   ├── patient_summary.pdf               ← NEW
+│   │   └── prediction_report.pdf             ← NEW
+│   │
+│   └── visualizations/
+│       ├── heatmap.png
+│       ├── risk_distribution.png
+│       ├── correlation_matrix.png
+│       ├── prediction_chart.png              ← NEW
+│       └── analytics_dashboard.png           ← NEW
+│
+├── backend/                                   # Django Backend
+│   │
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   │   ├── asgi.py
+│   │   ├── middleware.py                     ← NEW
+│   │   └── database.py                       ← NEW
+│   │
+│   ├── predictor/
+│   │   │
+│   │   ├── migrations/
+│   │   │
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py                         ← MAIN DATABASE FILE
+│   │   ├── forms.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── tests.py
+│   │   ├── validators.py
+│   │   ├── services.py
+│   │   ├── ml_utils.py
+│   │   ├── constants.py
+│   │   │
+│   │   ├── patient_history.py                ← NEW
+│   │   ├── appointment_manager.py            ← NEW
+│   │   ├── profile_manager.py                ← NEW
+│   │   ├── recommendation_engine.py          ← NEW
+│   │   ├── notification_manager.py           ← NEW
+│   │   ├── search_records.py                 ← NEW
+│   │   ├── comparison_engine.py              ← NEW
+│   │   ├── dashboard_service.py              ← NEW
+│   │   ├── analytics.py
+│   │   ├── chart_generator.py
+│   │   ├── report_generator.py
+│   │   ├── csv_export.py
+│   │   ├── excel_export.py
+│   │   └── feedback_manager.py               ← NEW
+│   │
+│   └── accounts/
+│       ├── models.py
+│       ├── views.py
+│       ├── forms.py
+│       ├── urls.py
+│       ├── authentication.py                 ← NEW
+│       ├── forgot_password.py                ← NEW
+│       └── profile_settings.py               ← NEW
+│
+├── frontend/                                  # Frontend Layer
+│   │
+│   ├── templates/
+│   │   └── predictor/
+│   │       │
+│   │       ├── base.html
+│   │       ├── navbar.html
+│   │       ├── sidebar.html
+│   │       ├── footer.html
+│   │       │
+│   │       ├── index.html
+│   │       ├── predict.html
+│   │       ├── result.html
+│   │       ├── dashboard.html
+│   │       ├── patients.html
+│   │       ├── patient_detail.html
+│   │       ├── reports.html
+│   │       ├── report_preview.html
+│   │       ├── history.html
+│   │       ├── analytics.html
+│   │       │
+│   │       ├── appointment.html             ← NEW
+│   │       ├── profile.html                 ← NEW
+│   │       ├── comparison.html              ← NEW
+│   │       ├── recommendations.html         ← NEW
+│   │       ├── notifications.html           ← NEW
+│   │       ├── feedback.html                ← NEW
+│   │       ├── forgot_password.html         ← NEW
+│   │       ├── reset_password.html          ← NEW
+│   │       ├── search_records.html          ← NEW
+│   │       │
+│   │       ├── about.html
+│   │       ├── contact.html
+│   │       ├── login.html
+│   │       ├── register.html
+│   │       └── error.html
+│   │
+│   ├── static/
+│   │   │
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   │   ├── dashboard.css
+│   │   │   ├── reports.css
+│   │   │   ├── animations.css
+│   │   │   ├── responsive.css
+│   │   │   ├── profile.css                  ← NEW
+│   │   │   ├── appointment.css              ← NEW
+│   │   │   └── analytics.css                ← NEW
+│   │   │
+│   │   ├── js/
+│   │   │   ├── app.js
+│   │   │   ├── charts.js
+│   │   │   ├── validations.js
+│   │   │   ├── reports.js
+│   │   │   ├── dashboard.js
+│   │   │   ├── appointment.js               ← NEW
+│   │   │   ├── notifications.js             ← NEW
+│   │   │   ├── analytics.js                 ← NEW
+│   │   │   └── comparison.js                ← NEW
+│   │   │
+│   │   ├── images/
+│   │   │   ├── hero-bg.jpg
+│   │   │   ├── doctor.png
+│   │   │   ├── heart-icon.png
+│   │   │   ├── hospital-logo.png
+│   │   │   ├── medical-banner.jpg
+│   │   │   ├── profile-avatar.png           ← NEW
+│   │   │   └── favicon.ico
+│   │   │
+│   │   ├── charts/
+│   │   │   ├── risk_chart.png
+│   │   │   ├── analytics_chart.png
+│   │   │   ├── monthly_prediction.png
+│   │   │   ├── patient_growth.png           ← NEW
+│   │   │   └── disease_analysis.png         ← NEW
+│   │   │
+│   │   ├── icons/
+│   │   └── vendors/
+│   │       ├── bootstrap/
+│   │       ├── chartjs/
+│   │       ├── fontawesome/
+│   │       ├── sweetalert/
+│   │       ├── aos/
+│   │       └── datatables/                  ← NEW
+│   │
+│   └── media/
+│       │
+│       ├── reports/
+│       │   │
+│       │   ├── pdf/
+│       │   │   ├── patient_101.pdf
+│       │   │   ├── patient_102.pdf
+│       │   │   ├── analytics_report.pdf
+│       │   │   ├── monthly_report.pdf
+│       │   │   └── prediction_summary.pdf   ← NEW
+│       │   │
+│       │   ├── csv/
+│       │   │   ├── patient_records.csv
+│       │   │   └── analytics_data.csv       ← NEW
+│       │   │
+│       │   ├── excel/
+│       │   │   ├── patient_data.xlsx
+│       │   │   └── dashboard_report.xlsx    ← NEW
+│       │   │
+│       │   └── charts/
+│       │       ├── risk_graph.png
+│       │       ├── patient_stats.png
+│       │       └── analytics_growth.png     ← NEW
+│       │
+│       └── uploads/
+│           ├── ecg_images/
+│           ├── profile_images/              ← NEW
+│           └── medical_documents/           ← NEW
+│
+├── logs/                                    ← NEW
+│   ├── application.log
+│   ├── prediction.log
+│   └── notification.log
+│
+├── tests/                                   ← NEW
+│   ├── unit/
+│   ├── integration/
+│   └── api/
+│
+└── deployment/
+    ├── gunicorn_config.py
+    ├── Procfile
+    ├── runtime.txt
+    ├── nginx.conf
+    ├── docker-compose.yml
+    ├── Dockerfile
+    └── monitoring.yml                       ← NEW
+
+   
+ 
+

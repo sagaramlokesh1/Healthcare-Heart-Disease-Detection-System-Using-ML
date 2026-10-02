@@ -1,0 +1,45 @@
+name: Application Health Monitoring
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:   # allow manual trigger
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check site availability
+        uses: wei/curl@v1
+        with:
+          args: --fail --silent --show-error --max-time 30 https://your-domain.com/health/
+        continue-on-error: false
+
+      - name: Test login endpoint (optional)
+        uses: wei/curl@v1
+        with:
+          args: --fail --silent --data "username=test&password=test" https://your-domain.com/accounts/login/
+        continue-on-error: true
+
+      - name: Check prediction API (if deployed)
+        uses: wei/curl@v1
+        with:
+          args: --fail --silent https://your-domain.com/api/predict/health
+        continue-on-error: true
+
+      - name: Send alert on failure
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: "🚨 HeartDiseaseProject Health Check Failed"
+          to: admin@example.com
+          from: MedPredict Monitor
+          body: |
+            The health check for HeartDiseaseProject has failed.
+            Please investigate immediately.
+            Time: ${{ github.event.head_commit.timestamp }}
