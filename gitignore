@@ -1,0 +1,27 @@
+# Environments
+venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Django/DB
+db.sqlite3
+media/
+static/admin/
+staticfiles/
+
+# ML Artifacts (Local only)
+ml_model/saved_models/*.pkl
+ml_model/reports/
+ml_model/dataset/*.csv
+
+# System/IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Deployment Logs
+deployment/logs/
